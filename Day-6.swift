@@ -7,10 +7,7 @@ let distances = lines[1].split(separator: ":")[1].split(separator: " ").compactM
 
 var result = 1
 
-for i in 0..<times.count {
-    let time = times[i]
-    let distance = distances[i]
-
+for (time, distance) in zip(times, distances) {
     var possibilities = [Int]()
 
     for ms in 0..<time {
